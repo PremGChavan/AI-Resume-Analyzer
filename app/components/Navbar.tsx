@@ -4,7 +4,7 @@ function Navbar() {
     return (
         <nav className="navbar">
             <Link to="/">
-                <p className="text-2xl font-bold text-gradient">RESUME ANALYZER</p>
+                <p className="text-2xl font-bold text-gradient">ATS Buddy</p>
             </Link>
             <Link to='/upload' className="primary-button w-fit">
                 Upload Resume
