@@ -1,4 +1,4 @@
-import { prepareInstructions } from 'constants';
+import { prepareInstructions } from 'constants/index';
 import { useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router';
 import FileUploader from '~/components/FileUploader';
@@ -53,6 +53,7 @@ const upload = () => {
       prepareInstructions({
         jobTitle,
         jobDescription,
+        AIResponseFormat: "json" 
       })
     )
 
@@ -79,9 +80,9 @@ const upload = () => {
     const jobTitle = formData.get('job-title') as string;
     const jobDescription = formData.get('job-description') as string;
 
-    // console.log({
-    //   companyName,jobTitle, jobDescription, file
-    // });
+    console.log({
+      companyName,jobTitle, jobDescription, file
+    });
     if(!file) return alert('Please upload a resume file.');
 
     handleAnalyze({ companyName, jobTitle, jobDescription, file });
